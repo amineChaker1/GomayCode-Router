@@ -1,0 +1,9 @@
+.nav a {
+  margin-left: 5vmin;
+  text-decoration: none;
+}
+.nav a.active {
+  text-decoration: none;
+  font-weight: bold;
+  color: aliceblue;
+}
