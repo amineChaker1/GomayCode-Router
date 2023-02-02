@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import FeaturedProducts from "./components/Featured";
 import NewProducts from "./components/NewProducts";
+import Users from "./components/Users";
+import UserDescription from "./components/UserDescrition";
 
 function App() {
   return (
@@ -16,9 +18,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="products" element={<Products />}>
+          {/*index routing is to display the child element directly without clicking on it */}
+          <Route index element={<FeaturedProducts />} />
           <Route path="featured" element={<FeaturedProducts />} />
           <Route path="new" element={<NewProducts />} />
         </Route>
+        <Route path="users" element={<Users />} />
+
+        <Route path="users/:userId" element={<UserDescription />} />
       </Routes>
     </>
   );
